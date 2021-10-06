@@ -24,7 +24,7 @@ example:
 - If you don't have (or have relatively few) closely-related protein sequences, BRAKER recommends using (or supplementing existing proteins with) OrthoDB proteins. (see BRAKER doc for full details) BRAKER was tested using ~300k closely-related proteins, ~3.5M OrthoDB Viridplantae proteins and the combined closely-related/OrthoDB set. In our tests, the closely-related protein set performed the best.
 
 # TSEBRA
-- If you have rna-seq in addition to protein-based BRAKER annotations (and hint files), you may choose to merge the two sets. Be aware that TSEBRA produces an annotation file that is an intersection of the rna-seq and protein-based annotations, i.e. the output gtf will contain fewer genes than either input gtf.
+- If you have rna-seq in addition to protein-based BRAKER annotations (and hint files), you may choose to merge the two sets.
 
 # software links
 - [kmasker](https://github.com/tschmutzer/kmasker)
