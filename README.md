@@ -2,7 +2,7 @@
 annotation pipeline based on kmasker and BRAKER
 
 
-![pipeline](figs/kmasker.braker2.annotation.png)
+![pipeline](figures/kmasker.braker2.annotation.png)
 
 below are some notes regarding various components of the pipeline
 
