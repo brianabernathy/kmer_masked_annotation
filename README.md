@@ -11,7 +11,9 @@ below are some notes regarding various components of the pipeline
 - The default kmasker frequency threshold is 10, though we've found 5 will also produce good results without over-masking. kmasker results produced with a frequency threshold of 5 were found to be less aggressively masked (approximately 50% fewer masked bases) than using RepeatModeler and RepeatMasker, with our data..
 
 # GenomeScope
-- If using reads, you'll need to determine the appropriate kmer frequency since read coverage will typically not equal 1x coverage. This is accomplished by following the Jellyfish and GenomeScope sub-pipeline to determine the GenomeScope "kcov" value. For diploids, be sure to set GenomeScope's ploidy option to '2'. In this case, kcov will represent the haploid kmer coverage, which should be doubled to represent the diploid kmer coverage. (If working with an inbred species, the haploid kcov should not be doubled.) It is recommended to check the GenomeScope plots to ensure the coverage curve and estimated haploid peak look reasonable. Finally, the diploid kmer coverage will need to be multiplied by the kmasker (genome) frequency threshold to obtain the adjusted frequency threshold for reads.
+- If using reads, you'll need to determine the appropriate kmer frequency since read coverage will typically not equal 1x coverage. This is accomplished by following the Jellyfish and GenomeScope sub-pipeline to determine the GenomeScope "kcov" value.
+- For diploids, be sure to set GenomeScope's ploidy option to '2'. In this case, kcov will represent the haploid kmer coverage, which should be doubled to represent the diploid kmer coverage. (If working with an inbred species, the haploid kcov should not be doubled.) It is recommended to check the GenomeScope plots to ensure the coverage curve and estimated haploid peak look reasonable.
+- Finally, the diploid kmer coverage will need to be multiplied by the kmasker (genome) frequency threshold to obtain the adjusted frequency threshold for reads.
 
 example: 
 - reads have a haploid kcov = 7, the preferred genome frequency threshold = 5 and the ploidy = 2
